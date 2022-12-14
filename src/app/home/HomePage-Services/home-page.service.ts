@@ -39,7 +39,7 @@ export class HomePageService {
     var user:User
     user={emailID:userEmailID, password:userPassword,usertype:type};
     console.log(user)
-    let result=this.http.post<number>('https://quickcart-functionapp.azurewebsites.net/api/LoginFunction?code=kDxJUURhVektI3q0G7_k0zea7O9yKG0FG-VfWfLqbLzpAzFuZJP6ww==',user)
+    let result=this.http.post<number>('https://quickart-team2-namratha.azurewebsites.net/api/Function1?code=3Pq5D2OUrrCbuGq0uoY2VhMbdxE7VTtOW_rFSFwfFuBwAzFu8KA9Eg==',user)
     return result
 
   }
