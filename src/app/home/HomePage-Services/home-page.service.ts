@@ -40,7 +40,7 @@ export class HomePageService {
     user={emailID:userEmailID, password:userPassword,usertype:type};
     console.log(user)
     let result=this.http.post<number>('https://quickart-team2-namratha.azurewebsites.net/api/Function1?code=3Pq5D2OUrrCbuGq0uoY2VhMbdxE7VTtOW_rFSFwfFuBwAzFu8KA9Eg==',user)
-    return result
+    return result 
 
   }
 
