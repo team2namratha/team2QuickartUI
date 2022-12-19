@@ -53,7 +53,7 @@ export class HomePageService {
     console.log(formData)
     let result=this.http.post<Response>('https://backendappservice-team2-namratha.azurewebsites.net/api/admin/upload',formData).pipe(catchError(this.errorHandler))
     console.log(result)
-    return result
+    return result 
   }
 
   errorHandler(error: HttpErrorResponse) {
