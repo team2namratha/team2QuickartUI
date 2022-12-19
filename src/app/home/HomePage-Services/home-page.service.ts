@@ -45,7 +45,20 @@ export class HomePageService {
   }
 
   
+public uploadImage(image: File): Observable<Response>{
+    const formData = new FormData();
+   
+    formData.append('image', image);
+    console.log(formData)
+    let result=this.http.post<Response>('https://backendappservice-team2-namratha.azurewebsites.net/api/admin/upload',formData).pipe(catchError(this.errorHandler))
+    console.log(result)
+    return result
+  }
 
+  errorHandler(error: HttpErrorResponse) {
+    console.log(error);
+    return throwError(error.message|| "server error")
+  }
   
 }
 
